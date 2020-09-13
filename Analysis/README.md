@@ -1,6 +1,6 @@
 # Polkadex Market Analysis :monocle_face:
 
-We have provided a python script to get the current trades per second at centralized exchanges. It uses [Shrimpy API](https://developers.shrimpy.io/) to get the analytics.
+We have provided a python script to get the average trades per second at centralized exchanges for 1 month. It uses [Shrimpy API](https://developers.shrimpy.io/) to get the analytics.
 
 ## Installing Shrimpy 
 ```python
