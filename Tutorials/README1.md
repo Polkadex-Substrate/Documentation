@@ -1,5 +1,6 @@
 # Running Polkadex Proof of Concept Substrate Chain :test_tube:
 
+NOTE: This Repo is WIP
 ## Introduction
 We hope you have previously used Substrate and you are familiar with using it. This tutorial is not complete and will be improved as we build from the Proof of Concept to Stable verisons.
 ## Prerequisites
