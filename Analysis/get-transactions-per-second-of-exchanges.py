@@ -26,6 +26,6 @@ for i in range(len(trading_pairs)):
               "baseTradingSymbol"] + "/" +
           trading_pairs[i]["quoteTradingSymbol"] + " Total Trades: ", total_count)
     total_count = total_count + count['count']
-    time.sleep(7)
+    time.sleep(7) # Remove this sleep if you have paid token from Shrimpy
 print("Total Trades in one month: {}", total_count)
 print("Average Trades per second: {}", float(total_count) / float((30 * 24 * 60 * 60)))
