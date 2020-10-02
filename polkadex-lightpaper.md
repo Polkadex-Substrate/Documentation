@@ -40,7 +40,7 @@ Snowfork is a Substrate to Ethereum trustless bridge created by the Snowfork tea
 Polkadot Parachain and Snowfork's trustless bridge solves the problem of custody of funds in Polkadex. In short, traders do not need to worry about exchange getting hacked, and no-one else has custody of their funds.
 ## Polkadex Token Economics :chart:
 Polkadex will have a total supply of *100 million tokens*. Initial Circulating Supply will be 10 million, out of which the Polkadex team will hold 6 million. The remaining 4 million tokens will be used to raise capital, ICO, and grants to teams that improve the Polkadex ecosystem.
-The 90 million tokens will be released into circulation as block rewards to validators with an inflation rate of  I
+The 90 million tokens will be released into circulation as block rewards to validators with an inflation rate of  I,
 
 Where as, 
 
