@@ -36,6 +36,8 @@ Polkadex Parachain allows traders to bring liquidity without trusting their asse
 * [Learn more about Parachains](https://wiki.polkadot.network/docs/en/learn-parachains)
 ## Trustless Bridge: Snowfork :link:
 Snowfork is a Substrate to Ethereum trustless bridge created by the Snowfork team. Once the Snowfork team completes the bridge, Polkadex will implement it; using Snowfork, traders can lock their assets on Ethereum using smart contracts and bridge liquidity to Polkadex. It does not involve any third parties, and assets are locked by the chain. Hence, trustless.
+##### Reference
+* [Snowfork](https://github.com/Snowfork/polkadot-ethereum)
 
 Polkadot Parachain and Snowfork's trustless bridge solves the problem of custody of funds in Polkadex. In short, traders do not need to worry about exchange getting hacked, and no-one else has custody of their funds.
 ## Polkadex Token Economics :chart:
