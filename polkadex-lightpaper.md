@@ -1,7 +1,7 @@
 ﻿![Logo](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/Logo.svg)
 ## Abstract :memo:
 We present a scalable, fully decentralized platform for exchanging tokens in a peer-peer and trustless manner. It enables high-frequency trading, high liquidity, and lightning-fast transaction speed for supporting Defi applications.
-## Introduction
+## Introduction :handshake:
 Substrate Blockchain Framework allows anyone to create application-specific blockchain without worrying about the technicality of block production and consensus.	It enables us to create a dedicated blockchain for decentralized exchange, which is purpose-built and configured to optimize the performance of DEXs. Previously Ethereum Smart Contracts allowed the creation of Defi services, but it is limited in computational resources required for the proper functioning of DEXs. It does not scale well. It is not upgradable, and it never provided a good trading experience, even after multiple hacks and catastrophic losses in the centralized exchanges like Mt. Gox, Bitfinex, etc. Orderbook based DEXs are not gaining volume. Limitations in computational resources led to the rise of Automated Market Making  (AMM) protocols like Uniswap. These protocols are profitable only when an arbitrage opportunity is available due to price differences in other exchanges. AMMs require Orderbook based exchanges, but Orderbook based exchanges do not require AMMs to function. 
 
 We believe that AMMs can supplement Orderbook based DEXs combined with fast execution logic, three-second block time, custom trading bot support, and our unique feature -- On-Chain market making bots, a.k.a *"AMMs inside a DEX."* We present to you, Polkadex.
