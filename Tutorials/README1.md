@@ -1,8 +1,12 @@
 # Running Polkadex Proof of Concept Substrate Chain :test_tube:
 
-NOTE: This Repo is WIP
-## Introduction
-We hope you have previously used Substrate and you are familiar with using it. This tutorial is not complete and will be improved as we build from the Proof of Concept to Stable verisons.
+## Overview
+In this documentation we intend to provide an overview of how to start the blockchain and place the following type of trades and observe these changes in the blockchain data.
+
+ 1. Bid limit
+ 2. Ask limit
+ 3. Bid Market
+ 4. Ask Market
 ## Prerequisites
 You will probably need to do some set-up to prepare your computer for Substrate development.
 1. If you are using a Unix-based machine (Linux, MacOS), we have created a simple one-liner to help you set up your computer
@@ -27,14 +31,113 @@ You will probably need to do some set-up to prepare your computer for Substrate 
    cd polkadex/
    cargo build --release
    ```
-## Run the Node
-1. Once it is compiled and run this command
-    ``` ./target/release/node-polkadex --dev ```
-2. You will start to see blocks getting generated. You can use the [polkadotapps](https://polkadot.js.org/apps/#/explorer) to interact with your local node
-3. Currently you need to use the Alice key for sending transactions. You can see the current key in the settings
-4. Go to Extrincis tab --> Generic Assets --> Create two new tokens for yourself. Note down the AssetIds emitted usually it will be "1" and "2".
-5. Now you have minted yourself two tokens, Go to Dex pallet in the same extrinsics tab and choose registerOrderBook. Enter the trading_asset_id as "1" and base_asset_id as "2". 
-6. Click Sign and Send. It will create a new orderbook in the dex pallet and registers their tokens pairs as you have given earlier. There will be event emitted by the transaction with the tradingPairId ( which will be 0 in this case).
-7. No you can go to submitOrder and start placing orders.
+# Start the blockchain
 
-NOTE: Price and Quantity is represented as FixedU128 (ie, if you want to enter 1.256 as your price. then enter the result of 1.256*(10^18)).
+Once you have compiled the source code, run the following command to start the blockchain,
+
+    ~/Polkadex/target/release/node-polkadex --dev
+
+If you are test running it for the second time, be sure to delete the old database by using the following command,
+
+    ~/Polkadex/target/release/node-polkadex purge-chain --dev
+
+# Setting up the browser
+
+To test the different type of trades, please open the following link in the local browser:
+
+https://polkadot.js.org/apps/#/explorer
+
+To connect to the local testnet, you need to change the source database to localhost, as given in the following image:
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image001.png)
+
+Clicking on the above link will help you select the local node:
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image003.png)
+
+You will now start seeing the blocks getting generated:
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image005.png)
+
+# Terminal view
+
+You can also verify it from the terminal. You should see something similar:
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image007.png)
+
+# View the blockchain state
+
+To view the chain state and the numbers entered during the trade, please click the below link,
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image009.png)
+
+# Interact with blockchain and submit orders
+
+To submit orders and to interact with the blockchain database, click on the below link,
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image011.png)
+
+# Create an asset
+
+Go to [https://polkadot.js.org/apps/#/extrinsics](https://polkadot.js.org/apps/#/extrinsics), select ‘genericAsset’, choose ‘create’ function and submit transaction as given below. Please make sure you select the “Milliunit” because of certain issues with the default javascript interface.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image013.png)
+
+Click on ‘sign and submit’
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image015.png)
+
+Verify using the blockchain explorer link,
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image017.png)
+
+# Create an orderbook of two assets
+
+Choose ‘polkadex’ pallet from the extrinsics and choose the ‘registerNewOrderbook’ function and choose the desired assets:
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image019.png)
+
+Verify on the main page and note down the hash of the new orderbook created. In the example below,
+
+_0xf28a3c76161b8d5723b6b8b092695f418037c747faa2ad8bc33d8871f720aac9_
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image021.png)
+
+# Submit a bid limit order
+
+Select the user, extrinsic type, submitOrder function, order type, the hash of the orderbook, price and quantity. Please make sure you select the “Milliunit” because of certain issues with the default javascript interface.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image023.png)
+
+# Submit an ask limit order
+
+Select the user, extrinsic type, submitOrder function, order type, the hash of the orderbook, price and quantity. Please make sure you select the “Milliunit” because of certain issues with the default javascript interface.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image025.png)
+
+# View free balance and reserve balance
+
+Go to ‘chain state’ and select the ‘selected state query’ as ‘genericAsset’ and the required asset type from the tab. In the asset ID, select the asset you want to view for the user. Click on the ‘+’ button.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image027.png)
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image029.png)
+
+# View Ask levels, bid levels in the created orderbook
+
+ 1. In the ‘chain state’ page, select the ‘state query’ as Polkadex and choose the corresponding database. 
+ 2. Enter the hash of the corresponding orderbook.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image031.png)
+
+# Submit a bid market order
+
+Repeat the same step as ‘Bid Limit’ but select the order type as ‘BidMarket’ and make sure we give the price alone and leave the quantity as blank.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image033.png)
+
+# Submit an ask market order
+
+Repeat the same step as ‘Ask Limit’ but select the order type as ‘AskMarket’ and make sure we give the quantity alone and leave the price as blank.
+
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image035.png)
