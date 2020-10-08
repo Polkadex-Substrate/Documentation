@@ -28,11 +28,11 @@ https://polkadot.js.org/apps/#/explorer
 
 To connect to the local testnet, you need to change the source database to localhost, as given in the following image:
 
-![image001](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/clip_image001.jpg)
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image001.png)
 
 Clicking on the above link will help you select the local node:
 
-![image003](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/clip_image003.jpg)
+![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image003.png)
 
 You will now start seeing the blocks getting generated:
 
