@@ -1,4 +1,4 @@
-# Running Polkadex Proof of Concept Substrate Chain :test_tube:
+# Running Polkadex Chain (Beta):test_tube:
 
 ## Overview
 In this documentation we intend to provide an overview of how to start the blockchain and place the following type of trades and observe these changes in the blockchain data.
