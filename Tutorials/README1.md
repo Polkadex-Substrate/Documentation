@@ -19,12 +19,12 @@ You will probably need to do some set-up to prepare your computer for Substrate 
     # If you've run this before, you don't need to run it again. But doing so is harmless.
     source ~/.cargo/env
 
-    # Update Rust
-    rustup update nightly
-    rustup update stable
+    # Set Rust Version
+    rustup override set nightly-2020-09-28
+    
 
     # Add Wasm target
-    rustup target add wasm32-unknown-unknown --toolchain nightly
+    rustup target add wasm32-unknown-unknown --toolchain nightly-2020-09-28
     ```
 3. Change directory and Compile the Polkadex Chain
    ```
