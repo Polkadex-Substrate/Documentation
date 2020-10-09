@@ -59,6 +59,47 @@ You will now start seeing the blocks getting generated:
 
 ![](https://raw.githubusercontent.com/Polkadex-Substrate/Documentation/master/images/clip_image005.png)
 
+Copy and Paste the Custom Polkadex Types given below on the Developer Section in the Settings Tab and Click Save
+```
+{
+  "OrderType": {
+    "_enum": [
+      "BidLimit",
+      "BidMarket",
+      "AskLimit",
+      "AskMarket"
+    ]
+  },
+  "Order": {
+    "id": "Hash",
+    "trading_pair": "Hash",
+    "trader": "AccountId",
+    "price": "FixedU128",
+    "quantity": "FixedU128",
+    "order_type": "OrderType"
+  },
+  "MarketData": {
+    "low": "FixedU128",
+    "high": "FixedU128",
+    "volume": "FixedU128"
+  },
+  "LinkedPriceLevel": {
+    "next": "Option<FixedU128>",
+    "prev": "Option<FixedU128>",
+    "orders": "Vec<Order>"
+  },
+  "Orderbook": {
+    "trading_pair": "Hash",
+    "base_asset_id": "u32",
+    "quote_asset_id": "u32",
+    "best_bid_price": "FixedU128",
+    "best_ask_price": "FixedU128"
+  },
+  "LookupSource": "AccountId",
+  "Address": "AccountId"
+}
+```
+![](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/Polkadot-Substrate-Portal.png)
 # Terminal view
 
 You can also verify it from the terminal. You should see something similar:
