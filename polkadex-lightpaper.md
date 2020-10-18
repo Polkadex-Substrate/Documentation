@@ -56,7 +56,7 @@ Where as,
 - Q4 2020
     - Testnet Launch
     - Parachain Implementation
-- Q1 2020
+- Q1 2021
     - Mainnet Launch
     - Security Audit
     - Public ICO
