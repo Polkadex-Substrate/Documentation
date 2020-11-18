@@ -1,4 +1,5 @@
 ﻿![Logo](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/Logo.svg)
+ ![Web3 Grants](https://github.com/Polkadex-Substrate/Documentation/blob/master/images/web3%20foundation_grants_badge_black.svg)
 ## Abstract :memo:
 We present a scalable, fully decentralized platform for exchanging tokens in a peer-peer and trustless manner. It enables high-frequency trading, high liquidity, and lightning-fast transaction speed for supporting Defi applications.
 ## Introduction :handshake:
